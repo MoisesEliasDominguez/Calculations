@@ -6,13 +6,13 @@ if (req.method === 'GET'){
     res.setHeader('Content-Type', 'text/html');
     res.end(`
     <form method="POST">
-    <input type="text" name="num1"></input>
+    <input type="text" name="Numero1"></input>
     <br>
     <br>
-    <input type="text" name="num2"></input>
+    <input type="text" name="Numero2"></input>
     <br>
     <br>
-    <input type="text" name="num3"></input>
+    <input type="text" name="Numero3"></input>
     <br>
     <br>
     <button type="submit">Calcular</button>
@@ -26,12 +26,12 @@ else if (req.method === 'POST'){
 
     req.on('end', ()=>{
         const parseBody = querystring.parse(body);
-        const num1 = parseFloat(parseBody.num1);
-        const num2 = parseFloat(parseBody.num2);
-        const num3 = parseFloat(parseBody.num3);
+        const Numero1 = parseFloat(parseBody.Numero1);
+        const Numero2 = parseFloat(parseBody.Numero2);
+        const Numero3 = parseFloat(parseBody.Numero3);
 
-        const sum = num1 + num2;
-        const respuesta = sum * num3;
+        const sum = Numero1 + Numero2;
+        const respuesta = sum * Numero3;
         
         res.setHeader('Content-Type', 'text/html');
         res.end(`
